@@ -1,0 +1,14 @@
+D:\projects\devopsDashboard\bin\Debug\net8.0\devopsDashboard.exe
+D:\projects\devopsDashboard\bin\Debug\net8.0\devopsDashboard.deps.json
+D:\projects\devopsDashboard\bin\Debug\net8.0\devopsDashboard.runtimeconfig.json
+D:\projects\devopsDashboard\bin\Debug\net8.0\devopsDashboard.dll
+D:\projects\devopsDashboard\bin\Debug\net8.0\devopsDashboard.pdb
+D:\projects\devopsDashboard\obj\Debug\net8.0\devopsDashboard.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\devopsDashboard\obj\Debug\net8.0\devopsDashboard.AssemblyInfoInputs.cache
+D:\projects\devopsDashboard\obj\Debug\net8.0\devopsDashboard.AssemblyInfo.cs
+D:\projects\devopsDashboard\obj\Debug\net8.0\devopsDashboard.csproj.CoreCompileInputs.cache
+D:\projects\devopsDashboard\obj\Debug\net8.0\devopsDashboard.dll
+D:\projects\devopsDashboard\obj\Debug\net8.0\refint\devopsDashboard.dll
+D:\projects\devopsDashboard\obj\Debug\net8.0\devopsDashboard.pdb
+D:\projects\devopsDashboard\obj\Debug\net8.0\devopsDashboard.genruntimeconfig.cache
+D:\projects\devopsDashboard\obj\Debug\net8.0\ref\devopsDashboard.dll
