@@ -1,43 +1,19 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Collections.Generic;
-using SigNEXDashboard.Models;
-using SigNEXDashboard.Data;
-using System.Linq;
 
-namespace SigNEXDashboard.pages
+namespace serverDashboard.Pages;
+
+public class IndexModel : PageModel
 {
-    public class IndexModel : PageModel
+    private readonly ILogger<IndexModel> _logger;
+
+    public IndexModel(ILogger<IndexModel> logger)
     {
-        public List<ClientInstance> ClientInstances { get; set; } = new List<ClientInstance>();
-        public DashboardData FullData { get; set; }
+        _logger = logger;
+    }
 
-        public void OnGet()
-        {
-            FullData = DataGenerator.Generate(3);
-            ClientInstances = FullData.ClientInstance;
+    public void OnGet()
+    {
 
-            ClientInstances = ClientInstances
-                .OrderByDescending(c => c.Status == ServerStatus.Offlineline)
-                .thenByDescending(c => c.Status == ServerStatus.Degraded)
-                .thenBy(c => c.ClientName)
-                .Tolist();
-
-            DefaultClientId = ClientInstances.FirstOrDefault()?.ClientId;
-
-
-        }
-
-        public string GetAnomalyIcon (AnomalyType type)
-        {
-            return type switch
-            {
-                AnomalyType.Error => "⚠",
-                AnomalyType.Warning => "❗",
-                AnomalyType.HighLatency => "⏳",
-                AnomalyType.UnusualTraffic => "📈",
-                _ => "ℹ"
-
-            };
-        }
     }
 }

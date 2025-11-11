@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projects\\devopsDashboard\\devopsDashboard.csproj",
-      "projectName": "devopsDashboard",
-      "projectPath": "D:\\projects\\devopsDashboard\\devopsDashboard.csproj",
+      "projectUniqueName": "D:\\projects\\serverDashboard\\serverDashboard.csproj",
+      "projectName": "serverDashboard",
+      "projectPath": "D:\\projects\\serverDashboard\\serverDashboard.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "D:\\projects\\devopsDashboard\\obj\\",
+      "outputPath": "D:\\projects\\serverDashboard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,19 +1,10 @@
-@page
-@model SigNEXDashboard.Pages.IndexModel
+﻿@page
+@model IndexModel
 @{
-    ViewData["Title"] = "SigNEX DevOps Dashboard";
-    Layout = null;
+    ViewData["Title"] = "Home page";
 }
 
-<h1>SigNEX Client Monitoring Dashboard</h1>
-<p>Select a client below to view detailed performance metrics.</p>
-
-<p>Data simulated as of: @Model.FullData.GeneratedTime.ToLocalTime().ToString("g")</p>
-
-<h2>Active Clients (@Model.ClientInstances.Count)</h2>
-@foreach (var instance in Model.ClientInstances)
-{
-    <div>
-        <strong>@instance.ClientName</strong> – @instance.Status – @instance.Region
-    </div>
-}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
