@@ -5,15 +5,15 @@ namespace serverDashboard.Services
 {
     public class ServerService
     {
-        private readonly List<Client> _clients;
+        private readonly Root _data;
 
         public ServerService()
-        {            
+        {
             string json = File.ReadAllText("Data/serverData.json");
-            _clients = JsonSerializer.Deserialize<List<Client>>(json);
+            _data = JsonSerializer.Deserialize<Root>(json);
         }
 
-        public List<Client> GetClients() => _clients;
-        public Client GetClient(string clientId) => _clients.FirstOrDefault(c => c.ClientId == clientId);
+        public List<Client> GetClients() => _data.Clients;
+        public Client GetClient(string clientId) => _data.Clients.FirstOrDefault(c => c.ClientId == clientId);
     }
 }

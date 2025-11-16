@@ -29,3 +29,4 @@ D:\projects\serverDashboard\obj\Debug\net8.0\refint\serverDashboard.dll
 D:\projects\serverDashboard\obj\Debug\net8.0\serverDashboard.pdb
 D:\projects\serverDashboard\obj\Debug\net8.0\serverDashboard.genruntimeconfig.cache
 D:\projects\serverDashboard\obj\Debug\net8.0\ref\serverDashboard.dll
+D:\projects\serverDashboard\bin\Debug\net8.0\Data\serverData.json
