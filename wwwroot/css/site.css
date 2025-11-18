@@ -1,22 +1,72 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #1e1e2f;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00d8ff;
+}
+
+.client-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.client-btn {
+    background: #2e2e4d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.client-btn:hover {
+    background: #00d8ff;
+    color: #1e1e2f;
+    transform: scale(1.05);
+}
+
+#serverTable {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeIn 0.5s ease;
+}
+
+#serverTable th, #serverTable td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+}
+
+#serverTable th {
+    background: #333366;
+    color: #00d8ff;
+}
+
+#serverTable tr:nth-child(even) {
+    background: #2a2a40;
+}
+
+#serverTable tr:hover {
+    background: #4444aa;
+    transition: background 0.3s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
