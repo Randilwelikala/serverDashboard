@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace serverDashboard.Models
 {
     public class Root
