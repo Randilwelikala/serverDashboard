@@ -9,12 +9,16 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\projects\\serverDashboard\\wwwroot\\data\\clients.json",
+      "PackagePath": "staticwebassets\\data\\clients.json"
+    },
+    {
       "Id": "D:\\projects\\serverDashboard\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\projects\\serverDashboard\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "D:\\projects\\serverDashboard\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
     },
     {
       "Id": "D:\\projects\\serverDashboard\\wwwroot\\lib\\bootstrap\\LICENSE",

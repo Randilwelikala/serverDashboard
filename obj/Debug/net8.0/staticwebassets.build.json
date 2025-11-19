@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Lz21OWZ/oP2j7pe6JnqYWeAbOuS11aDKoCTbNz/FnWk=",
+  "Hash": "8xGuCwcq7PWgUKBDvAdKPP79VO74PR63iXB/6i6g+hU=",
   "Source": "serverDashboard",
   "BasePath": "_content/serverDashboard",
   "Mode": "Default",
@@ -74,6 +74,25 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "D:\\projects\\serverDashboard\\wwwroot\\data\\clients.json",
+      "SourceId": "serverDashboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\serverDashboard\\wwwroot\\",
+      "BasePath": "_content/serverDashboard",
+      "RelativePath": "data/clients.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\clients.json"
+    },
+    {
       "Identity": "D:\\projects\\serverDashboard\\wwwroot\\favicon.ico",
       "SourceId": "serverDashboard",
       "SourceType": "Discovered",
@@ -93,12 +112,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\projects\\serverDashboard\\wwwroot\\js\\site.js",
+      "Identity": "D:\\projects\\serverDashboard\\wwwroot\\js\\dashboard.js",
       "SourceId": "serverDashboard",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\projects\\serverDashboard\\wwwroot\\",
       "BasePath": "_content/serverDashboard",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/dashboard.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\dashboard.js"
     },
     {
       "Identity": "D:\\projects\\serverDashboard\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
