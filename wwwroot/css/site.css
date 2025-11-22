@@ -18,6 +18,10 @@ body {
     color: #00d8ff;
 }
 
+#secondTitle{
+    text-align: center;
+}
+
 .client-buttons {
     text-align: center;
     margin-bottom: 20px;
