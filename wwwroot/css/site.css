@@ -2,9 +2,13 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: #f3f3f3;
-    color: #ffffff;
+    color: #000000;
     margin: 0;
     padding: 20px;
+}
+
+.navbar i{
+    color: #2a2a40;
 }
 
 
