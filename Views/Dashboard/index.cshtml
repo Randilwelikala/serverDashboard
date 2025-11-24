@@ -1,7 +1,12 @@
 @model List<serverDashboard.Models.Client>
 <div class="navbar">
     <i class="fa-regular fa-square"></i>
-    <input type="search" />
+    <div class="client-buttons">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <button class="client-btn" onclick="showClient(@i)">@Model[i].ClientName</button>
+    }
+</div>
     <i class="fa-solid fa-gear"></i>
     <i class="fa-solid fa-user"></i>
 </div>
@@ -9,12 +14,23 @@
 <h1 class="title">System health Dashboard</h1>
 <p id="secondTitle">Real-time server health and serviceperformance monitoring</p>
 
-<div class="client-buttons">
-    @for (int i = 0; i < Model.Count; i++)
-    {
-        <button class="client-btn" onclick="showClient(@i)">@Model[i].ClientName</button>
-    }
+<div class="topCardSection">
+    <div class="card1">
+    <p>Overall System Status</p>
+
+     
+    </div>
+    <div class="card2">
+        <P>Active Alerts</P>
+     
+    </div>
+    <div class="card3">
+        Avg API Response Time
+     
+    </div>    
 </div>
+
+
 
 <h2 id="clientName">@Model[0].ClientName</h2>
 
