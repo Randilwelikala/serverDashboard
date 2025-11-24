@@ -1,24 +1,46 @@
 /* my css */
+
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #f3f3f3;
+    background: #ffffff;
     color: #000000;
     margin: 0;
     padding: 20px;
 }
 
-.navbar i{
-    color: #2a2a40;
+.navbar{
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+}
+
+#fill1{
+    width: 650px;
+
+}
+
+#logoSection{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+#settingSection{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+#name{
+    font-weight: bold;
 }
 
 
 
 
-
-
-
 /* my css finishe */
-
 
 
 

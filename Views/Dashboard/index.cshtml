@@ -1,15 +1,22 @@
 @model List<serverDashboard.Models.Client>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+
 <div class="navbar">
-    <i class="fa-regular fa-square"></i>
-    <p>SigNEX</p>
+    <div id="logoSection">
+        <i class="fa-regular fa-square"></i>
+        <p id="name">SigNEX</p>
+    </div>
     <div class="client-buttons">
-    @for (int i = 0; i < Model.Count; i++)
-    {
-        <button class="client-btn" onclick="showClient(@i)">@Model[i].ClientName</button>
-    }
-</div>
-    <i class="fa-solid fa-gear"></i>
-    <i class="fa-solid fa-user"></i>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <button class="client-btn" onclick="showClient(@i)">@Model[i].ClientName</button>
+        }
+    </div>
+    <div id="fill1"></div>
+    <div id="settingSection">
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid fa-user"></i>    
+    </div>
 </div>
 
 <h1 class="title">System health Dashboard</h1>
