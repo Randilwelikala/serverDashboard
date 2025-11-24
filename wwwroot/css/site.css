@@ -2,7 +2,7 @@
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffffff;
+    background: #f8f8f8;
     color: #000000;
     margin: 0;
     padding: 20px;
@@ -59,6 +59,109 @@ body {
 }
 
 /* title end  */
+
+/* first card section start */
+.firstCardSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.firstCardSectioncard{
+    background-color: #ffffff;
+    height: 80px;
+    width: 350px;
+    padding: 5px 10px 5px 10px;
+    align-items: left;
+}
+
+/* first card section end */
+
+/* second card section start */
+.secondCardSection{    
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.leftColumn{
+    display: flex;
+    flex-direction: column;    
+}
+
+.firstLeftSection{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+
+.secondLeftSection{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.firstLeftcard{
+    height: 550px;
+    background-color: #ffffff;
+    width: 100%;
+    gap: 10px;    
+}
+
+.secondtLeftcard{
+    height: 550px;
+    background-color: #ffffff;
+    width: 100%;
+    gap: 10px;
+
+}
+
+.rightColumn{
+    align-self: flex-start;
+
+}
+
+.rightColumnCard{
+    width: 100%;
+    height: 700px;
+    background-color: #ffffff;
+    
+    
+}
+
+/* second card section end */
+
+/* third card section start  */
+.thirdCardSectionCard{
+    width: 100%;
+    background-color: #ffffff;
+    height: 250px;
+    margin-top: 10px;
+}
+
+/* third card section end  */
+
+/* fourth card section start  */
+
+.fourthCardSectionCard{
+    width: 100%;
+    background-color: #ffffff;
+    height: 250px;
+    margin-top: 10px;
+
+}
+
+/* fourth card section start  */
+
+/* footer start  */
+
+/* footer end  */
+
 
 
 
