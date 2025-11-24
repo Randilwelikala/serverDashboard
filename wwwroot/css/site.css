@@ -8,6 +8,12 @@ body {
     padding: 20px;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* navbar start  */
 .navbar{
     display: flex;
     justify-content: space-between;    
@@ -37,6 +43,23 @@ body {
     font-weight: bold;
 }
 
+/* navbar end */
+
+/* title start */
+.title {
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+#secondTitle{
+    text-align: left;
+    margin-top: 2px;
+}
+
+/* title end  */
+
 
 
 
@@ -44,21 +67,10 @@ body {
 
 
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
 
-.title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #00d8ff;
-}
 
-#secondTitle{
-    text-align: center;
-}
+
+
 
 .client-buttons {
     text-align: center;
