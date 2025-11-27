@@ -30,7 +30,7 @@
 <hr />
 
 <div class="firstCardSection">
-    <div class="firstCardSectioncard">
+    <div id="displayStatus" class="firstCardSectioncard">
         <p>Overall System Status</p>          
     </div>
 
@@ -98,10 +98,12 @@
         const clientButtons = document.querySelectorAll('.clientButton');
         const serverButtonsDiv = document.getElementById('serverButtons');  
         const displayName = document.getElementById('displayClientName');      
+        const displayServerStatus = document.getElementById('displayStatus');
  
         clientButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const clientId = btn.dataset.client;
+                displayServerStatus.innerHTML = '';
                 serverButtonsDiv.innerHTML = '';         
                 displayName.innerHTML = '';     
                 const clientNameDisplay = document.createElement('p');
@@ -115,7 +117,7 @@
                         servers.forEach(server => {
                             const sBtn = document.createElement('button');
                             sBtn.textContent = server.serverName;
-                            sBtn.dataset.server = server.ServerId;
+                            sBtn.dataset.server = server.serverId;
                             sBtn.dataset.client = clientId;
                             sBtn.className = 'serverBtn';
                             serverButtonsDiv.appendChild(sBtn);
@@ -124,6 +126,11 @@
                                 fetch(`/Dashboard/GetServerDetails?clientId=${clientId}&serverId=${server.ServerId}`)
                                     .then(res => res.json())
                                     .then(data => {
+                                        displayServerStatus.innerHTML = '';
+                                        const sStatus = document.createElement('p');
+                                        sStatus.textContent = server.status;
+                                        displayServerStatus.appendChild(sStatus);
+
                                        
                                     });
                             });
