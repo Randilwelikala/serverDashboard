@@ -111,12 +111,13 @@
                 fetch(`/Dashboard/GetServers?clientId=${clientId}`)
                     .then(response => response.json())
                     .then(servers => {
+                        console.log(servers);
                         servers.forEach(server => {
                             const sBtn = document.createElement('button');
-                            sBtn.textContent = server.ServerName;
+                            sBtn.textContent = server.serverName;
                             sBtn.dataset.server = server.ServerId;
                             sBtn.dataset.client = clientId;
-                            sBtn.className = 'server-btn';
+                            sBtn.className = 'serverBtn';
                             serverButtonsDiv.appendChild(sBtn);
 
                             sBtn.addEventListener('click', () => {

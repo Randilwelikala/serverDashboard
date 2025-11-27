@@ -1,20 +1,24 @@
 using serverDashboard.Models;
 using System.Text.Json;
+using System.IO;
+using System.Linq;
+
+
 
 namespace serverDashboard.Services
 {
     public class ServerService
     {
-        private readonly Root _root;
+        private readonly string _jsonFilePath = "wwwroot/data/clients.json";
 
-        public ServerService()
-        {           
-            var json = System.IO.File.ReadAllText("wwwroot/data/clients.json");
-            _root = JsonSerializer.Deserialize<Root>(json);
+        private Root LoadJson()
+        {
+            var json = File.ReadAllText(_jsonFilePath);
+            return JsonSerializer.Deserialize<Root>(json);
         }
 
-        public List<Client> GetClients() => _root.Clients;
-        public Client GetClientById(string clientId) => _root.Clients.FirstOrDefault(c => c.ClientId == clientId);
+        public List<Client> GetClients() => LoadJson().Clients;
+        public Client GetClientById(string clientId) => LoadJson().Clients.FirstOrDefault(c => c.ClientId == clientId);
         public Server GetServer(string clientId, string serverId) => GetClientById(clientId)?.Servers.FirstOrDefault(s => s.ServerId == serverId);
     }
 }
