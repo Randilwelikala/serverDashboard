@@ -1,18 +1,15 @@
 @model List<serverDashboard.Models.Client>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
-@{
-    ViewData["Title"] = "Server Dashboard";
-}
 <div class="navbar">
     <div id="logoSection">
         <i class="fa-regular fa-square"></i>
         <p id="name">SigNEX</p>
     </div>
     
-    <div id="client-buttons">
+    <div id="allClientsButtons">
         @foreach (var client in Model)
         {
-            <button class="client-btn" data-client="@client.ClientId">@client.ClientName</button>
+            <button class="clientButton" data-client="@client.ClientId">@client.ClientName</button>
         }
     </div>    
 
@@ -27,29 +24,23 @@
 <p id="secondTitle">Real-time server health and service performance monitoring</p>
 
 <hr />
-<div id="server-buttons">
-    <!-- Server buttons will be dynamically generated here -->
+<div id="serverButtons">    
 </div>
 <hr />
-<div id="server-details">
-    <!-- Server details will be displayed here -->
-</div>
-
 
 <div class="firstCardSection">
     <div class="firstCardSectioncard">
-        <p>Overall System Status</p> 
-        <p>@Model[0].Servers[0].Status</p>
-          
+        <p>Overall System Status</p>          
     </div>
+
     <div class="firstCardSectioncard">
-        <P>Active Alerts</P>
-     
+        <P>Active Alerts</P>     
     </div>
+
     <div class="firstCardSectioncard">
         <p>Avg API Response Time</p>
-
     </div>    
+
 </div>
 
 <div class="secondCardSection">
@@ -135,15 +126,14 @@
 
 @section Scripts {
     <script>
-        const clientButtons = document.querySelectorAll('.client-btn');
-        const serverButtonsDiv = document.getElementById('server-buttons');
+        const clientButtons = document.querySelectorAll('.clientButton');
+        const serverButtonsDiv = document.getElementById('serverButtons');
         const serverDetailsDiv = document.getElementById('server-details');
-
+ 
         clientButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const clientId = btn.dataset.client;
-                serverButtonsDiv.innerHTML = '';
-                serverDetailsDiv.innerHTML = '<p>Select a server to view details.</p>';
+                serverButtonsDiv.innerHTML = '';                
 
                 fetch(`/Dashboard/GetServers?clientId=${clientId}`)
                     .then(response => response.json())
