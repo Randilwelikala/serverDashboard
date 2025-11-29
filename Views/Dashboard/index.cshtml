@@ -48,7 +48,7 @@
     <div class="leftColumn">
         <h3>System Resources</h3>
         <div class="firstLeftSection">
-            <div class="firstLeftcard">
+            <div id="cpuUsage" class="firstLeftcard">
                 CPU Usage %   
             </div>
             <div class="firstLeftcard">
@@ -99,11 +99,13 @@
         const serverButtonsDiv = document.getElementById('serverButtons');  
         const displayName = document.getElementById('displayClientName');      
         const displayServerStatus = document.getElementById('displayStatus');
+        const displayCPUUsage = document.getElementById('cpuUsage');
  
         clientButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const clientId = btn.dataset.client;
                 displayServerStatus.innerHTML = '';
+                displayCPUUsage.innerHTML = '';
                 serverButtonsDiv.innerHTML = '';         
                 displayName.innerHTML = '';     
                 const clientNameDisplay = document.createElement('p');
@@ -130,6 +132,13 @@
                                         const sStatus = document.createElement('p');
                                         sStatus.textContent = server.status;
                                         displayServerStatus.appendChild(sStatus);
+
+                                        displayCPUUsage.innerHTML = '';
+                                        const sCPU = document.createElement('p');
+                                        sCPU.textContent = server.cpuUsagePercent;
+                                        displayCPUUsage.appendChild(sCPU);
+
+
 
                                        
                                     });
