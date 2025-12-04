@@ -51,7 +51,7 @@
             <div id="cpuUsage" class="firstLeftcard">
                 CPU Usage %   
             </div>
-            <div class="firstLeftcard">
+            <div id="memoryDisplay" class="firstLeftcard">
                 Memory Utilization  
             </div>
 
@@ -100,12 +100,14 @@
         const displayName = document.getElementById('displayClientName');      
         const displayServerStatus = document.getElementById('displayStatus');
         const displayCPUUsage = document.getElementById('cpuUsage');
+        const displayMemory = document.getElementById('memoryDisplay');
  
         clientButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const clientId = btn.dataset.client;
                 displayServerStatus.innerHTML = '';
                 displayCPUUsage.innerHTML = '';
+                displayMemory.innerHTML='';
                 serverButtonsDiv.innerHTML = '';         
                 displayName.innerHTML = '';     
                 const clientNameDisplay = document.createElement('p');
@@ -138,10 +140,12 @@
                                         sCPU.textContent = server.cpuUsagePercent;
                                         displayCPUUsage.appendChild(sCPU);
 
-                                        displayCPUUsage.innerHTML = '';
-                                        const sCPU = document.createElement('p');
-                                        sCPU.textContent = server.cpuUsagePercent;
-                                        displayCPUUsage.appendChild(sCPU);
+                                        displayMemory.innerHTML = '';
+                                        const sMem = document.createElement('p');
+                                        sMem.textContent = server.errorRatePercent;
+                                        displayMemory.appendChild(sMem);
+
+                                        
 
 
 
