@@ -41,6 +41,7 @@
 
     <div class="firstCardSectioncard">
         <p>Avg API Response Time</p>
+        <div id="requestlLatency"></div>
     </div>    
 
 </div>
@@ -104,6 +105,7 @@
         const displayServerStatus = document.getElementById('displayStatus');
         const displayCPUUsage = document.getElementById('cpuUsage');
         const displayMemory = document.getElementById('memoryDisplay');
+        const displayRequestLatencyMs = document.getElementById('requestlLatency');
  
         clientButtons.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -113,6 +115,7 @@
                 displayMemory.innerHTML='';
                 serverButtonsDiv.innerHTML = '';         
                 displayName.innerHTML = '';     
+                displayRequestLatencyMs.innerHTML='';
                 const clientNameDisplay = document.createElement('p');
                 clientNameDisplay.textContent = btn.textContent;
                 document.getElementById('displayClientName').appendChild(clientNameDisplay);
@@ -147,6 +150,11 @@
                                         const sMem = document.createElement('p');
                                         sMem.textContent = server.errorRatePercent;
                                         displayMemory.appendChild(sMem);
+                                        
+                                        displayRequestLatencyMs.innerHTML = '';
+                                        const sReq = document.createElement('p');
+                                        sReq.textContent = server.requestLatencyMs;
+                                        displayRequestLatencyMs.appendChild(sMem);
 
                                         
 
